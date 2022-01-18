@@ -28,8 +28,8 @@
     "reflect-metadata": "^0.1.13",
     "regenerator-runtime": "^0.13.7",
     "terser-webpack-plugin": "^1.4.2",
+    "webgl-obj-loader": "^2.0.8",
     "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webgl-obj-loader": "^2.0.8"
+    "webpack-cli": "^3.3.12"
   }
 }

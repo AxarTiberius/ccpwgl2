@@ -32,7 +32,7 @@ module.exports = {
             "particle": path.resolve(__dirname, "./src/particle"),
             "sof": path.resolve(__dirname, "./src/sof"),
             "state": path.resolve(__dirname, "./src/state"),
-            "wrapped": path.resolve(__dirname, "./src/wrapped"),
+            //"wrapped": path.resolve(__dirname, "./src/wrapped"),
             "unsupported": path.resolve(__dirname, "./src/unsupported"),
 
             // We'll fix these later

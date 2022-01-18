@@ -782,7 +782,7 @@ export class EveTurretSet extends EveObjectSet
             {
                 tw2.Debug({
                     name: "EveTurretSet",
-                    message: `Could not find usage TEXCOORD usage 1`
+                    message: "Could not find usage TEXCOORD usage 1"
                 });
             }
         }
