@@ -31,5 +31,8 @@
     "webgl-obj-loader": "^2.0.8",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"
+  },
+  "scripts": {
+    "start": "npx buffet --no-watch -p $PORT"
   }
 }
