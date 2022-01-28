@@ -208,7 +208,7 @@ export const config = {
         "res": "https://developers.eveonline.com/ccpwgl/assetpath/1097993/",
 
         // Local resource server (not provided with this library)
-        "cdn": "http://localhost:3000/"
+        "cdn": "https://developers.eveonline.com/ccpwgl/assetpath/1097993/"
 
     },
 
