@@ -68,9 +68,14 @@
                         }
                         ship = scene[constructor](dna, function()
                         {
+                            var dnaParts = dna.split(":");
+                            if (!dnaParts[0] || !dnaParts[1] || !dnaParts[2]) {
+                                // require all 3 DNA parts.
+                                return;
+                            }
                             // Position the ship above the landing pad
                             // This probably should be calculated from bounding sphere...
-                            this.transform.Set({
+                            this.transform.SetTransform({
                                 translation: [ 0, shipHeightFromLandingPad, 0 ]
                             });
 
@@ -80,7 +85,7 @@
                                 this.setBoosterStrength(0.1);
                             }
 
-                            var hull = dna.split(":")[0];
+                            var hull = dnaParts[0];
                             if (lastHull !== hull)
                             {
                                 camera.focus(this, 3, 50, true);

@@ -902,7 +902,7 @@ export class EveSOFData extends meta.Model
         {
             mask.display = false;
             mask.materialIndex = 0;
-            mask.parameters.PatternMaskMap.SetValue("cdn:/texture/global/black.png");
+            mask.parameters.PatternMaskMap.SetValue("cdn:/texture/global/black.dds.0.png");
             vec4.set(mask.targetMaterials, 0, 0, 0, 0);
         }
 

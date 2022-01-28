@@ -425,7 +425,7 @@ export function EveSOF()
                 display = !!layers[i].textureName,
                 materialSource = 0,
                 textureName = `PatternMask${i + 1}Map`,
-                textureResFilePath = "cdn:/texture/global/black.png",
+                textureResFilePath = "cdn:/texture/global/black.dds.0.png",
                 projectionTypeU = 0,
                 projectionTypeV = 0,
                 isTargetMtl1 = true,
