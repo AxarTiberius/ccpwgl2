@@ -271,6 +271,10 @@ export function isTag(a, tag)
  */
 export function isTr2OrTri(string)
 {
+    if (typeof string != "string") 
+    {
+        return false;
+    }
     return string && string.indexOf("Tr2") === 0 || string.indexOf("Tri") === 0;
 }
 
