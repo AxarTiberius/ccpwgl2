@@ -26,7 +26,7 @@
             var $canvas = $('#mainCanvas');
             ccpwgl.initialize($canvas[0], demos.options);
 
-            camera = ccpwgl.createCamera($canvas[0], undefined, true);
+            camera = ccpwgl.createCamera($canvas[0], {rotationX: 1, rotationY: 0.5}, true);
             scene = ccpwgl.loadScene('res:/dx9/scene/universe/m10_cube.red');
             var lastHull = null;
 
@@ -69,14 +69,22 @@
             {
                 var dna = $('#dna').val();
                 loadDna(dna);
-                history.pushState({'dna': dna}, 'SOF ' + dna);
+                history.pushState({'dna': dna}, 'SOF ' + dna, '#' + dna);
+                document.title = 'SOF ' + dna + ' - CCPWGL Demos'
             });
 
-            var urlDna = getDnaFromUrl()
-            if (urlDna) {
-                $('#dna').val(urlDna)
-                $('#create').click()
+            function hashChanged () {
+                var urlDna = getDnaFromUrl()
+                if (urlDna) {
+                  $('#dna').val(urlDna)
+                  $('#create').click()
+                  setTimeout(function () {
+                      $('#browse').click()
+                  }, 1000)
+                }
             }
+            window.onhashchange = hashChanged;
+            hashChanged()
 
             $('#normal').click(function()
             {
