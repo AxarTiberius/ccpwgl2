@@ -75,13 +75,15 @@
 
             function hashChanged () {
                 var urlDna = getDnaFromUrl()
-                if (urlDna) {
-                  $('#dna').val(urlDna)
-                  $('#create').click()
-                  setTimeout(function () {
-                      $('#browse').click()
-                  }, 1000)
+                if (!urlDna) {
+                    // default to load
+                    urlDna = 'soes1:soebase:soe'
                 }
+                $('#dna').val(urlDna)
+                $('#create').click()
+                setTimeout(function () {
+                   $('#browse').click()
+                }, 1000)
             }
             window.onhashchange = hashChanged;
             hashChanged()
@@ -128,7 +130,7 @@
 <div id="browse-pane" class="pane visible">
     <div class="pane-heading">Browse</div>
     <div class="flex-horizontal">
-        <input id="dna" type="text" class="flex-expand" value="::" placeholder="soes1:soebase:soe">
+        <input id="dna" type="text" class="flex-expand" value="soes1:soebase:soe" placeholder="soes1:soebase:soe">
         <button id="create" class="default">Create</button>
     </div>
     <ul class="sof-tree flex-expand"></ul>
