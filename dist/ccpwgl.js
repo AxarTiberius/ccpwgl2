@@ -2268,7 +2268,7 @@ var ccpwgl = (function(ccpwgl_int)
              */
             if (delta)
             {
-                this.distance = this.distance + delta * this.distance * 0.1;
+                this.distance = this.distance + delta * -1 * this.distance * 0.1;
                 if (this.distance < this.minDistance)
                 {
                     this.distance = this.minDistance;
