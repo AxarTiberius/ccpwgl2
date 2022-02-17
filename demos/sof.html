@@ -27,7 +27,7 @@
             ccpwgl.initialize($canvas[0], demos.options);
 
             camera = ccpwgl.createCamera($canvas[0], {rotationX: 1, rotationY: 0.5}, true);
-            scene = ccpwgl.loadScene('res:/dx9/scene/wormholes/wormhole_class_03.red');
+            scene = ccpwgl.createScene();
             var lastHull = null;
 
             if (demos.options.postprocess)
