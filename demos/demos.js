@@ -9,6 +9,7 @@ var demos = new function()
     }
     catch (e)
     {
+        console.error('options error', e)
     }
 
     function decodeUrlOptions()
@@ -19,7 +20,6 @@ var demos = new function()
             decode = function(s) { return decodeURIComponent(s.replace(pl, " ")); },
             query = window.location.search.substring(1);
 
-        self.options = {};
         while (match = search.exec(query))
         {
             self.options[decode(match[1])] = decode(match[2]);
@@ -35,7 +35,9 @@ var demos = new function()
     {
         if (state)
         {
-            self.options = state.options || {};
+            if (state.options) {
+                self.options = {};
+            }
         }
         decodeUrlOptions();
         saveOptions();
