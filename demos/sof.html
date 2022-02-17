@@ -28,6 +28,11 @@
 
             camera = ccpwgl.createCamera($canvas[0], {rotationX: 1, rotationY: 0.5}, true);
             scene = ccpwgl.createScene();
+            ccpwgl.enableUpdate(false);
+            setTimeout(function () {
+                ccpwgl.enableRendering(false);
+            }, 10000);
+
             var lastHull = null;
 
             if (demos.options.postprocess)

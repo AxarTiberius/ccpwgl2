@@ -867,16 +867,16 @@ export function EveSOF()
         var ship = new (_get(hull, 'buildClass', 0) === 2 ? EveSpaceObject : EveShip)();
         var pattern = SetupPattern(hull, race, commands);
         SetupMesh(ship, hull, faction, race, commands, pattern);
-        SetupCustomMasks(ship, pattern);
-        SetupDecals(ship, hull, faction);
-        SetupSpriteSets(ship, hull, faction);
-        SetupSpotlightSets(ship, hull, faction);
-        SetupPlaneSets(ship, hull, faction);
-        SetupBoosters(ship, hull, race);
-        SetupLocators(ship, hull);
-        var curves = SetupAnimations(ship, hull);
-        SetupChildren(ship, hull, curves[0], curves[1]);
-        SetupInstancedMeshes(ship, hull, faction, race, commands, pattern);
+        //SetupCustomMasks(ship, pattern);
+        //SetupDecals(ship, hull, faction);
+        //SetupSpriteSets(ship, hull, faction);
+        //SetupSpotlightSets(ship, hull, faction);
+        //SetupPlaneSets(ship, hull, faction);
+        //SetupBoosters(ship, hull, race);
+        //SetupLocators(ship, hull);
+        //var curves = SetupAnimations(ship, hull);
+        //SetupChildren(ship, hull, curves[0], curves[1]);
+        //SetupInstancedMeshes(ship, hull, faction, race, commands, pattern);
 
         ship.Initialize();
         return ship;

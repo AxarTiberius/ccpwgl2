@@ -201,6 +201,7 @@ export class Tw2Device extends Tw2EventEmitter
         this.glVersion = WebglVersion.NONE;
         this.effectDir = '/effect.gles2/';
         this.canvas = null;
+        this.doneInit = false;
 
         const
             returnFalse = () => (false),

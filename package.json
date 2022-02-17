@@ -27,7 +27,7 @@
     "webpack-cli": "^3.1.2"
   },
   "scripts": {
-    "watch": "webpack --progress --watch",
+    "watch": "NODE_OPTIONS=--openssl-legacy-provider webpack --progress --watch --watch-poll --hot",
     "start": "static -p $PORT -a 0.0.0.0",
     "build": "NODE_OPTIONS=--openssl-legacy-provider webpack"
   },
