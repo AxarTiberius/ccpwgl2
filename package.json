@@ -28,7 +28,8 @@
   },
   "scripts": {
     "watch": "webpack --progress --watch",
-    "start": "static -p $PORT -a 0.0.0.0"
+    "start": "static -p $PORT -a 0.0.0.0",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack"
   },
   "engines": {
     "node": "16.x"
